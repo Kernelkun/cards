@@ -23,6 +23,7 @@ module.exports = {
     'arrow-parens': 0,
     'comma-dangle': 0,
     'import/no-unresolved': 0,
+    'object-curly-newline': 0,
     'react/jsx-filename-extension': 0,
     semi: 0
   },

@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-import { setLoggedOut } from 'actions/sync/auth'
 import View from './View'
 
 const mapStateToProps = state => ({
@@ -7,8 +6,6 @@ const mapStateToProps = state => ({
   token: state.auth.token
 })
 
-const mapDispatchToProps = {
-  setLoggedOut
-}
+const mapDispatchToProps = {}
 
 export default connect(mapStateToProps, mapDispatchToProps)(View)

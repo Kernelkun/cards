@@ -1,8 +1,8 @@
 import { applyMiddleware, createStore, compose } from 'redux'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
-import reducers from '../reducers'
 import { getServiceClientMiddleware } from 'support/network/NetworkMiddleware'
+import reducers from '../reducers'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 

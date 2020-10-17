@@ -1,12 +1,9 @@
-import { setLoggedOut } from 'actions/sync/auth'
-
 export const manageError = serviceClient => error => {
   if (error.response) {
     // The request was made and the server responded with a status code
     // that falls out of the range of 2xx
     if (error.response.status === 401) {
       // serviceClient.executeAction()
-      serviceClient.next(setLoggedOut())
     }
     if (error.response.status === 404) {
       // serviceClient.executeAction()

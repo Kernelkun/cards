@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { ScrollToTop } from '@igz/components'
+import ScrollToTop from 'components/ScrollToTop'
 import LoggedIn from '../LoggedIn'
 import LoggedOut from '../LoggedOut'
 

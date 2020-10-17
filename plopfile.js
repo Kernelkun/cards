@@ -17,18 +17,26 @@ module.exports = plop => {
         // Add a new file
         type: 'add',
         // Path for the new file
-        path: 'frontend/src/components/{{pascalCase name}}/index.js',
+        path: 'src/components/{{pascalCase name}}/index.js',
         // Handlebars template used to generate content of new file
         templateFile: 'plop-templates/frontend/components/index.js.hbs'
       },
       {
+        // Add a new file
         type: 'add',
-        path: 'frontend/src/components/{{pascalCase name}}/Styles.js',
+        // Path for the new file
+        path: 'src/components/{{pascalCase name}}/View.js',
+        // Handlebars template used to generate content of new file
+        templateFile: 'plop-templates/frontend/components/view.js.hbs'
+      },
+      {
+        type: 'add',
+        path: 'src/components/{{pascalCase name}}/Styles.js',
         templateFile: 'plop-templates/frontend/components/ComponentStyles.js.hbs'
       },
       {
         type: 'add',
-        path: 'frontend/src/components/{{pascalCase name}}/{{pascalCase name}}.stories.js',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.stories.js',
         templateFile: 'plop-templates/frontend/components/ComponentStory.js.hbs'
       }
     ]
@@ -52,18 +60,18 @@ module.exports = plop => {
         // Add a new file
         type: 'add',
         // Path for the new file
-        path: 'frontend/src/pages/{{pascalCase name}}/index.js',
+        path: 'src/pages/{{pascalCase name}}/index.js',
         // Handlebars template used to generate content of new file
         templateFile: 'plop-templates/frontend/pages/index.js.hbs'
       },
       {
         type: 'add',
-        path: 'frontend/src/pages/{{pascalCase name}}/Styles.js',
+        path: 'src/pages/{{pascalCase name}}/Styles.js',
         templateFile: 'plop-templates/frontend/pages/PageStyles.js.hbs'
       },
       {
         type: 'add',
-        path: 'frontend/src/pages/{{pascalCase name}}/View.js',
+        path: 'src/pages/{{pascalCase name}}/View.js',
         templateFile: 'plop-templates/frontend/pages/View.js.hbs'
       }
     ]
