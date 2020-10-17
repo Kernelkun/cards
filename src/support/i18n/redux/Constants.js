@@ -1,0 +1,1 @@
+export const SET_I18N_MUST_UPDATE = 'SET_I18N_MUST_UPDATE'

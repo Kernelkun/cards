@@ -7,7 +7,7 @@ module.exports = {
   webpack: {
     alias: {
       actions: path.resolve(__dirname, 'src/actions/'),
-      commonConstants: path.resolve(__dirname, 'src/commonConstants/'),
+      constants: path.resolve(__dirname, 'src/constants/'),
       components: path.resolve(__dirname, 'src/components/'),
       contexts: path.resolve(__dirname, 'src/contexts/'),
       img: path.resolve(__dirname, 'src/img/'),
@@ -24,7 +24,7 @@ module.exports = {
     configure: {
       moduleNameMapper: {
         '^actions(.*)$': '<rootDir>/src/actions/',
-        '^commonConstants(.*)$': '<rootDir>/src/commonConstants/',
+        '^constants(.*)$': '<rootDir>/src/constants/',
         '^components(.*)$': '<rootDir>/src/components/',
         '^contexts(.*)$': '<rootDir>/src/contexts/',
         '^img(.*)$': '<rootDir>/src/img/',

@@ -1,30 +1,29 @@
+const path = require('path')
+
 module.exports = {
   env: {
     browser: true,
     es6: true,
-    jest: true,
+    jest: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: 'module'
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
-    semi: 0,
+    'arrow-parens': 0,
     'comma-dangle': 0,
-    'react/jsx-filename-extension': 0
+    'import/no-unresolved': 0,
+    'react/jsx-filename-extension': 0,
+    semi: 0
   },
-};
+}
