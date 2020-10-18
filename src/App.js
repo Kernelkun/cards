@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import ThemeProvider from 'components/Theme'
+import { Theme as ThemeProvider } from 'components/Theme'
 import { Root as RootNavigator } from 'support/navigation'
 import { store } from 'store'
 

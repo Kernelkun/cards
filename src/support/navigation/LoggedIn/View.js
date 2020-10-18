@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Redirect, Switch, useLocation } from 'react-router-dom'
-import PrivateRoute from 'components/PrivateRoute'
 import paths from 'constans/paths'
-
+import PrivateRoute from 'components/PrivateRoute'
+import Dashboard from 'pages/Dashboard'
 import Error from 'pages/Error/View'
 
 const LoggedIn = ({ isLogged }) => {
@@ -18,7 +18,7 @@ const LoggedIn = ({ isLogged }) => {
         <p>COLLECTION</p>
       </PrivateRoute>
       <PrivateRoute exact path={paths.DASHBOARD}>
-        <p>DASHBOARD</p>
+        <Dashboard />
       </PrivateRoute>
       <PrivateRoute exact path={paths.HOME}>
         <Redirect to={{ pathname: paths.DASHBOARD }} />

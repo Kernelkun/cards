@@ -57,7 +57,7 @@ const ResponsiveDrawer = ({ children }) => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar color="primary" position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
             color="inherit"
