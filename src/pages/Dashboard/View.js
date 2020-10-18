@@ -1,11 +1,21 @@
 import React from 'react'
 import { Section, SectionItem } from 'components/Section'
-import { Button } from '@material-ui/core'
 
 const Dashboard = () => (
   <Section>
     <SectionItem>
-      <Button color="primary">Button</Button>
+      <div>
+        <h2>DATOS</h2>
+      </div>
+      <div>
+        <h2>STEAM OFFERS</h2>
+      </div>
+      <div>
+        <h2>PROGRESO</h2>
+      </div>
+      <div>
+        <h2>ANUNCIO</h2>
+      </div>
     </SectionItem>
   </Section>
 )

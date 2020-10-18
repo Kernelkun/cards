@@ -4,7 +4,8 @@ import { Redirect, Switch, useLocation } from 'react-router-dom'
 import paths from 'constans/paths'
 import PrivateRoute from 'components/PrivateRoute'
 import Dashboard from 'pages/Dashboard'
-import Error from 'pages/Error/View'
+import Error from 'pages/Error'
+import Collection from 'pages/Collection'
 
 const LoggedIn = ({ isLogged }) => {
   const location = useLocation()
@@ -15,7 +16,7 @@ const LoggedIn = ({ isLogged }) => {
         <p>CARD</p>
       </PrivateRoute>
       <PrivateRoute exact path={paths.COLLECTION}>
-        <p>COLLECTION</p>
+        <Collection />
       </PrivateRoute>
       <PrivateRoute exact path={paths.DASHBOARD}>
         <Dashboard />

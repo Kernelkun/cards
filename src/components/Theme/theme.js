@@ -15,8 +15,9 @@ export default createMuiTheme({
       white: '#FFFFFF'
     },
     background: {
-      paper: '#FAFAFA',
-      default: '#E8E8E8'
+      default: '#E8E8E8',
+      footer: 'radial-gradient(75.83% 97.35% at 50% -34.97%,#072fdc 0,#030d37)',
+      paper: '#FAFAFA'
     },
     primary: {
       light: '#665bff',
