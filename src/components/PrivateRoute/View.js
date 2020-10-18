@@ -13,7 +13,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     <Route {...rest}>
       <div className={classes.container}>
         <Header />
-        <div className={classes.main}>{children}</div>
+        <div>{children}</div>
         <Footer />
       </div>
     </Route>
