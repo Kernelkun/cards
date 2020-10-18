@@ -1,15 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Grid } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import Typography from '@material-ui/core/Typography'
 import useStyles from './Styles'
 
-const Footer = () => {
+const Footer = ({ className }) => {
   const classes = useStyles()
 
   return (
-    <footer>
+    <footer className={className}>
       <Grid>
         <Grid className={classes.container} container>
           <Grid className={classes.footerLogo} container item>
@@ -113,8 +114,12 @@ const Footer = () => {
   )
 }
 
-Footer.propTypes = {}
+Footer.propTypes = {
+  className: PropTypes.string
+}
 
-Footer.defaultProps = {}
+Footer.defaultProps = {
+  className: ''
+}
 
 export default Footer

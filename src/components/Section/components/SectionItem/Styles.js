@@ -39,7 +39,7 @@ export default makeStyles(theme => ({
     color: theme.palette.error.contrastText
   },
   container: {
-    padding: 0,
+    padding: theme.spacing(2),
     flexWrap: ({ wrap }) => `${wrap}`
   },
   maxWidthLg: {

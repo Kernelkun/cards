@@ -30,7 +30,6 @@ export default makeStyles(theme => ({
     width: drawerWidth
   },
   content: {
-    flexGrow: 1,
-    padding: theme.spacing(3)
+    flexGrow: 1
   }
 }))

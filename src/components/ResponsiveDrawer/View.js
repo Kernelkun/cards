@@ -20,6 +20,7 @@ import { useTheme } from '@material-ui/core/styles'
 import paths from 'constans/paths'
 import i18n from 'support/i18n'
 import useStyles from './Styles'
+import Footer from '../Footer'
 
 const ResponsiveDrawer = ({ children }) => {
   const classes = useStyles()
@@ -103,10 +104,13 @@ const ResponsiveDrawer = ({ children }) => {
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        {children}
-      </main>
+      <div className={classes.content}>
+        <main>
+          <div className={classes.toolbar} />
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }
