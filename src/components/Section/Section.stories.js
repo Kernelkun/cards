@@ -20,7 +20,7 @@ export const Default = args => (
 
 export const primary = () => (
   <div>
-    <Section color='primary'>
+    <Section color="primary">
       <SectionItem>
         <Dummy>Header</Dummy>
       </SectionItem>
@@ -30,7 +30,7 @@ export const primary = () => (
 
 export const secondary = () => (
   <div>
-    <Section color='secondary'>
+    <Section color="secondary">
       <SectionItem>
         <Dummy>Header</Dummy>
       </SectionItem>

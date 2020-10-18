@@ -6,4 +6,4 @@ export default {
   title: 'Design System/frontend/components/Header'
 }
 
-export const Default = () => (<Header>Header</Header>)
+export const Default = () => <Header>Header</Header>

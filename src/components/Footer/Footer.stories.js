@@ -6,4 +6,4 @@ export default {
   title: 'Design System/frontend/components/Footer'
 }
 
-export const Default = () => (<Footer>Footer</Footer>)
+export const Default = () => <Footer>Footer</Footer>

@@ -65,10 +65,10 @@ export const Text = () => {
     <div>
       {textInfo.map(({ key, value }) => (
         <div key={key}>
-          <TextComponent display='block' variant={key} onClick={() => copyToClipboard(key)}>
+          <TextComponent display="block" variant={key} onClick={() => copyToClipboard(key)}>
             {key}
           </TextComponent>
-          <TextComponent display='block' variant='caption'>
+          <TextComponent display="block" variant="caption">
             {textProperties(value)}
           </TextComponent>
           <hr />
@@ -82,7 +82,7 @@ export const Properties = () => (
   <div>
     {propertiesInfo.map(({ key, value }) => (
       <div key={key} onClick={() => copyToClipboard(key)}>
-        <TextComponent display='block' variant='body2'>
+        <TextComponent display="block" variant="body2">
           <span>
             {key} = {value}
           </span>
@@ -129,7 +129,7 @@ export const PaletteColors = () => {
             <span style={{ ...dotStyle, background: value }} onClick={() => copyToClipboard(key)}>
               &nbsp;
             </span>
-            <TextComponent display='inline' variant='body2' style={textStyle}>
+            <TextComponent display="inline" variant="body2" style={textStyle}>
               <span style={{ cursor: 'pointer' }} onClick={() => copyToClipboard(value)}>
                 {key} = '{value}'
               </span>
