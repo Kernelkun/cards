@@ -2,7 +2,7 @@ import React from 'react'
 import { Section, SectionItem } from 'components/Section'
 
 const Collection = () => (
-  <Section>
+  <Section sega>
     <SectionItem>
       <div>
         <h2>BUSCADOR</h2>
