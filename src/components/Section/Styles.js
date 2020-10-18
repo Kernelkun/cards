@@ -19,8 +19,8 @@ export default makeStyles(theme => ({
       top: theme.spacing(8.125),
       left: theme.spacing(30),
       width: 'calc(100% - 240px)',
-      height: theme.spacing(41.25),
-      zIndex: 2
+      height: theme.spacing(25),
+      zIndex: 1
     }
   }
 }))

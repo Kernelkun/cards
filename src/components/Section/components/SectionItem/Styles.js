@@ -40,7 +40,8 @@ export default makeStyles(theme => ({
   },
   container: {
     padding: theme.spacing(2),
-    flexWrap: ({ wrap }) => `${wrap}`
+    flexWrap: ({ wrap }) => `${wrap}`,
+    zIndex: 2
   },
   maxWidthLg: {
     maxWidth: theme.spacing(135.5)

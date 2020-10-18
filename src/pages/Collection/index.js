@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import View from './View'
 
-const mapStateToProps = () => {
-  return {}
-}
+const mapStateToProps = state => ({
+  collectionName: state.collection.name
+})
 
 const mapDispatchToProps = () => {
   return {}
