@@ -3,7 +3,7 @@ import { Section, SectionItem } from 'components/Section'
 
 const Login = () => (
   <Section>
-    <SectionItem>LLogin</SectionItem>
+    <SectionItem>Login</SectionItem>
   </Section>
 )
 

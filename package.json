@@ -14,11 +14,13 @@
     "axios": "^0.20.0",
     "clsx": "^1.1.1",
     "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "^6.13.0",
     "eslint-import-resolver-webpack": "^0.13.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsx-a11y": "6.3.1",
-    "eslint-plugin-react": "7.21.4",
-    "eslint-plugin-react-hooks": "4.1.2",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "4.0.0",
     "fontsource-poppins": "3.0.3",
     "husky": "4.3.0",
     "i18n-js": "3.7.1",
@@ -44,10 +46,6 @@
     "lint": "yarn run prettier && yarn run eslint",
     "test": "craco test --watch --env=jsdom",
     "test:coverage": "yarn run test -- --coverage",
-    "pre-commit": "yarn run lint",
-    "pre-push": "yarn test",
-    "post-merge": "yarn install",
-    "post-rewrite": "yarn install",
     "plop": "plop",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -76,6 +74,15 @@
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
+    "eslint": "7.2.0",
     "react-is": "^16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint",
+      "pre-push": "yarn test",
+      "post-merge": "yarn install",
+      "post-rewrite": "yarn install"
+    }
   }
 }

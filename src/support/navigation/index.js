@@ -1,3 +1,3 @@
-export Root from './Root'
-export LoggedIn from './LoggedIn'
-export LoggedOut from './LoggedOut'
+export { default as Root } from './Root'
+export { default as LoggedIn } from './LoggedIn'
+export { default as LoggedOut } from './LoggedOut'

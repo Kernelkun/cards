@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import useStyles from './Styles'
 import { Grid } from '@material-ui/core'
 import clsx from 'clsx'
 import capitalize from '@material-ui/core/utils/capitalize'
 import Container from '@material-ui/core/Container'
+import useStyles from './Styles'
 
 const SectionItem = ({ children, className, color, wrap }) => {
   const classes = useStyles({ color, wrap })

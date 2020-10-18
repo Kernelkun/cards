@@ -14,7 +14,7 @@ const Section = ({ children, className, color, page, ...rest }) => {
 }
 
 Section.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   color: PropTypes.oneOf(['primary', 'secondary', 'inherit']),
   page: PropTypes.bool

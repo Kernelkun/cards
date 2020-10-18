@@ -1,6 +1,6 @@
 import React from 'react'
 import i18n from 'i18n-js'
-import en from './en'
+import en from './en.json'
 import { setI18nToReload } from './redux/Actions'
 
 i18n.defaultLocale = 'en'
@@ -13,7 +13,7 @@ i18n.toCurrencyStrip = amount => i18n.toCurrency(amount, { strip_insignificant_z
 i18n.tWithComponent = (i18nKey, components) => {
   const object = {}
 
-  Object.entries(components).forEach(([key, value], index) => {
+  Object.entries(components).forEach(([key], index) => {
     object[key] = `#{${index}}#`
   })
 
@@ -21,14 +21,15 @@ i18n.tWithComponent = (i18nKey, components) => {
 
   const result = array.map(value => {
     let temp = React.createElement('span', null, value)
-    Object.entries(components).forEach(([key, component], index) => {
-      if (value === `{${index}}`) temp = component
+    Object.entries(components).forEach((x, index) => {
+      // eslint-disable-next-line prefer-destructuring
+      if (value === `{${index}}`) temp = x[1]
     })
     return temp
   })
 
-  return React.Children.map(result, (child, index) => {
-    return React.cloneElement(child, { key: index })
+  return React.Children.map(result, (child) => {
+    return React.cloneElement(child, { key: new Date() })
   })
 }
 

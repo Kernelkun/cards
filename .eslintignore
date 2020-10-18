@@ -1,1 +1,7 @@
+.storybook
+node_modules
+plop-templates
+public
 src/serviceWorker.js
+src/support/network/
+src/stories
