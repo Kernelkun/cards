@@ -34,6 +34,7 @@ const SectionItem = ({ children, className, color, wrap }) => {
 }
 
 SectionItem.propTypes = {
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   color: PropTypes.oneOf([
     'error',

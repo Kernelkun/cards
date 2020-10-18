@@ -1,16 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import useStyles from './Styles'
 
-const Header = ({}) => {
-  const classes = useStyles()
-
-  return (
-    <div>
-      Header
-    </div>
-  )
-}
+const Header = () => <div>Header</div>
 
 Header.propTypes = {}
 

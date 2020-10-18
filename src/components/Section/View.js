@@ -13,8 +13,6 @@ const Section = ({ children, className, color, page, ...rest }) => {
   )
 }
 
-export default Section
-
 Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
@@ -27,3 +25,5 @@ Section.defaultProps = {
   color: 'inherit',
   page: false
 }
+
+export default Section

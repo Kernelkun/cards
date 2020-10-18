@@ -1,16 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import useStyles from './Styles'
 
-const Footer = ({}) => {
-  const classes = useStyles()
-
-  return (
-    <div>
-      Footer
-    </div>
-  )
-}
+const Footer = () => <div>Footer</div>
 
 Footer.propTypes = {}
 
