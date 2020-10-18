@@ -15,7 +15,8 @@ export default makeStyles(theme => ({
         color: theme.palette.common.white,
         textDecoration: 'none'
       }
-    }
+    },
+    minHeight: theme.spacing(28.75)
   },
   footerLogo: {
     borderBottom: '1px solid #fff',

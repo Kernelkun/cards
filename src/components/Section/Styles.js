@@ -4,7 +4,7 @@ export default makeStyles(theme => ({
   container: {
     background: ({ color, sega }) =>
       !sega && (color === 'inherit' ? 'inherit' : theme.palette[color].main),
-    minHeight: theme.spacing(70)
+    minHeight: 'calc(100vh - 64px - 230px)'
   },
   page: {
     minHeight: theme.spacing(107)
