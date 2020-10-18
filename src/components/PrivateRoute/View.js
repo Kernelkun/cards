@@ -1,19 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
+import Header from 'components/Header'
 import Footer from 'components/Footer'
-import useStyles from './Styles'
 import ResponsiveDrawer from '../ResponsiveDrawer'
 
 const PrivateRoute = ({ children, ...rest }) => {
-  const classes = useStyles()
-
   return (
     <Route {...rest}>
-      <div className={classes.container}>
-        <ResponsiveDrawer>{children}</ResponsiveDrawer>
+      <ResponsiveDrawer>
+        <Header />
+        {children}
         <Footer />
-      </div>
+      </ResponsiveDrawer>
     </Route>
   )
 }

@@ -21,7 +21,7 @@ const LoggedIn = ({ isLogged }) => {
         <p>DASHBOARD</p>
       </PrivateRoute>
       <PrivateRoute exact path={paths.HOME}>
-        <p>DASHBOARD</p>
+        <Redirect to={{ pathname: paths.DASHBOARD }} />
       </PrivateRoute>
 
       <PrivateRoute path="*">
