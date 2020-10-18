@@ -1,19 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
-import Header from 'components/Header'
 import Footer from 'components/Footer'
 import useStyles from './Styles'
+import ResponsiveDrawer from '../ResponsiveDrawer'
 
 const PrivateRoute = ({ children, ...rest }) => {
   const classes = useStyles()
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <Route {...rest}>
       <div className={classes.container}>
-        <Header />
-        <div>{children}</div>
+        <ResponsiveDrawer>{children}</ResponsiveDrawer>
         <Footer />
       </div>
     </Route>

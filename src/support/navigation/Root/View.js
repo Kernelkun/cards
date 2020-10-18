@@ -6,7 +6,7 @@ import LoggedIn from '../LoggedIn'
 import LoggedOut from '../LoggedOut'
 
 const Root = ({ isLogged }) => {
-  const baseUrl = process.env.PUBLIC_URL
+  const baseUrl = '/'
 
   return (
     <Router basename={baseUrl}>

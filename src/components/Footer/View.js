@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = () => <div>Footer</div>
+const Footer = () => <footer>Footer</footer>
 
 Footer.propTypes = {}
 

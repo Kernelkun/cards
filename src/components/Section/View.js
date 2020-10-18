@@ -7,9 +7,9 @@ const Section = ({ children, className, color, page, ...rest }) => {
   const classes = useStyles({ color })
 
   return (
-    <div className={clsx(classes.container, className, page && classes.page)} {...rest}>
+    <section className={clsx(classes.container, className, page && classes.page)} {...rest}>
       {children}
-    </div>
+    </section>
   )
 }
 
