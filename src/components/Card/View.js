@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 import Grid from '@material-ui/core/Grid'
 import { Typography } from '@material-ui/core'
 import imageDefault from 'img/default_img_card.webp'
@@ -8,11 +9,11 @@ import CardTextNumber from './components/CardTextNumber'
 import Mountains from './components/Mountains'
 import useStyles from './Styles'
 
-const Card = ({ count, cursor, image, level, name, selected }) => {
+const Card = ({ className, count, cursor, image, level, name, selected }) => {
   const classes = useStyles({ cursor, image, selected })
 
   return (
-    <div className={classes.container}>
+    <div className={clsx(classes.container, className)}>
       <div className={classes.overlayColor} />
       <div className={classes.overlayInformation}>
         <Grid
@@ -42,6 +43,7 @@ const Card = ({ count, cursor, image, level, name, selected }) => {
 }
 
 Card.propTypes = {
+  className: PropTypes.string,
   count: PropTypes.number,
   cursor: PropTypes.string,
   image: PropTypes.string,
@@ -51,6 +53,7 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
+  className: '',
   count: 0,
   cursor: 'initial',
   image: imageDefault,

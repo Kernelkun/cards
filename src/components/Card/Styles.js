@@ -11,7 +11,7 @@ export default makeStyles(theme => ({
     height: ({ selected }) => (selected ? theme.spacing(64.375) : 'inherit'),
     minHeight: ({ selected }) => (!selected ? theme.spacing(49.375) : 'unset'),
     position: 'relative',
-    width: theme.spacing(40.25),
+    width: theme.spacing(30.625),
     zoom: ({ selected }) => (selected ? 1.1 : 'unset'),
     zIndex: ({ selected }) => (selected ? 10 : 'unset')
   },

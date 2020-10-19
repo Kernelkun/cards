@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Card from '@material-ui/core/Card'
-import Typography from '@material-ui/core/Typography'
-import Image from 'components/Image'
+import Grid from '@material-ui/core/Grid'
+import Card from 'components/Card'
 import { Section, SectionItem } from 'components/Section'
 import CollectionIcon from 'img/collection_icon_001.png'
 import SearchBlock from './components/SearchBlock'
+import useStyles from './Styles'
 
 const Collection = ({ cards, collectionName, getCards }) => {
+  const classes = useStyles()
+
   useEffect(() => {
     getCards()
   }, [getCards])
@@ -16,14 +18,13 @@ const Collection = ({ cards, collectionName, getCards }) => {
     <Section sega>
       <SectionItem>
         <SearchBlock avatar={CollectionIcon} collectionName={collectionName} />
-        <div>
+        <Grid className={classes.cardContainer} justify="center" container spacing={1}>
           {cards.map(card => (
-            <Card key={card.id}>
-              <Typography>{card.name}</Typography>
-              <Image src={card.image} alt={card.name} />
-            </Card>
+            <Grid item container justify="center" key={card.id} md={3} sm={4} xs={12}>
+              <Card image={card.image} name={card.name} count={card.count.total} />
+            </Grid>
           ))}
-        </div>
+        </Grid>
       </SectionItem>
     </Section>
   )
