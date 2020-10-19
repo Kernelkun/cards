@@ -5,6 +5,6 @@ const mapStateToProps = state => ({
   isLogged: state.auth.isLogged
 })
 
-const mapDispatchToProps = () => {}
+const mapDispatchToProps = () => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(View)

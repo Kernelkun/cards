@@ -3,7 +3,7 @@ import ThemeProvider from './index'
 
 export default {
   component: ThemeProvider,
-  title: 'Design System/@igz/components/ThemeProvider'
+  title: 'Design System/components/ThemeProvider'
 }
 
 export const Default = () => (
