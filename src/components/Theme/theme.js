@@ -1,9 +1,10 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import 'fontsource-poppins'
+import 'fontsource-open-sans'
+import 'fontsource-roboto'
 
 export default createMuiTheme({
   typography: {
-    fontFamily: ['Poppins', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
+    fontFamily: ['Roboto', 'Open Sans', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,

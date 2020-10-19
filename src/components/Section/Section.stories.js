@@ -4,7 +4,7 @@ import SectionItem from './components/SectionItem'
 
 export default {
   component: Section,
-  title: 'Design System/frontend/components/Section'
+  title: 'Design System/components/Section'
 }
 
 export const Default = args => (

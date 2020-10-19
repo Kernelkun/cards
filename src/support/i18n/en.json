@@ -28,7 +28,12 @@
     "URL": "URL"
   },
   "PAGES": {
-    "DASHBOARD": {}
+    "DASHBOARD": {},
+    "COLLECTION": {
+      "CARD": {
+        "NAME": "Name"
+      }
+    }
   },
   "USER_MENU": {
     "COLLECTION": "Collection",

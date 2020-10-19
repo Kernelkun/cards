@@ -17,14 +17,12 @@ const Collection = ({ cards, collectionName, getCards }) => {
       <SectionItem>
         <SearchBlock avatar={CollectionIcon} collectionName={collectionName} />
         <div>
-          {cards.map(card => {
-            return (
-              <Card key={card.id}>
-                <Typography>{card.name}</Typography>
-                <Image src={card.image} alt={card.name} />
-              </Card>
-            )
-          })}
+          {cards.map(card => (
+            <Card key={card.id}>
+              <Typography>{card.name}</Typography>
+              <Image src={card.image} alt={card.name} />
+            </Card>
+          ))}
         </div>
       </SectionItem>
     </Section>
