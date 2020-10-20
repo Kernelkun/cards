@@ -5,6 +5,7 @@ import paths from 'constans/paths'
 import PrivateRoute from 'components/PrivateRoute'
 import Dashboard from 'pages/Dashboard'
 import Error from 'pages/Error'
+import Home from 'pages/Home'
 import Collection from 'pages/Collection'
 
 const LoggedIn = ({ isLogged }) => {
@@ -22,7 +23,7 @@ const LoggedIn = ({ isLogged }) => {
         <Dashboard />
       </PrivateRoute>
       <PrivateRoute exact path={paths.HOME}>
-        <Redirect to={{ pathname: paths.DASHBOARD }} />
+        <Home />
       </PrivateRoute>
 
       <PrivateRoute path="*">

@@ -33,6 +33,18 @@
       "CARD": {
         "NAME": "Name"
       }
+    },
+    "HOME": {
+      "ADVERTISING": {
+        "TITLE": "Edit your card image with the Streamloots' Card Creator",
+        "PARAGRAPH": "It can be used with Streamloots Originals or with cards generated with the Streamlots' Card Creator. The Streamloots Originals and the cards created with the Streamloots' Card Creator can now be edited. Before this change, you had to create the card from 0, but now you can do all the canges you want and save without having to create a new card.",
+        "FIND_OUT": "Find out more"
+      },
+      "COLLECTION": {
+        "COLLECTION": "Collection",
+        "GO_TO_COLLECTION": "Go to collection",
+        "PARAGRAPH": "Build your own interactive card collection and let your community become a part of the show. No matter what you stream, level up your content with Streamloots. From choosing the character the streamer is going to play with, displaying a message in the screen or making the streamer drop the guns in the game, to really fun things such as making them sing or dress up as a dinosaur. Everything is possible because every streamer defines the type of interactions they want to have with their viewers!"
+      }
     }
   },
   "USER_MENU": {
