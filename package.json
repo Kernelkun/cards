@@ -51,7 +51,7 @@
     "plop": "plop",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "server": "json-server --watch src/support/cards/cards.json --port 3004"
+    "server": "json-server --watch src/support/cards/chibi.json --port 3004"
   },
   "eslintConfig": {
     "extends": "react-app"

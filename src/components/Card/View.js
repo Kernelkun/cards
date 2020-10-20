@@ -9,8 +9,8 @@ import CardTextNumber from './components/CardTextNumber'
 import Mountains from './components/Mountains'
 import useStyles from './Styles'
 
-const Card = ({ className, count, cursor, image, level, name, selected }) => {
-  const classes = useStyles({ cursor, image, selected })
+const Card = ({ className, count, cursor, image, level, name }) => {
+  const classes = useStyles({ cursor, image })
 
   return (
     <div className={clsx(classes.container, className)}>
@@ -48,8 +48,7 @@ Card.propTypes = {
   cursor: PropTypes.string,
   image: PropTypes.string,
   level: PropTypes.string,
-  name: PropTypes.string,
-  selected: PropTypes.bool
+  name: PropTypes.string
 }
 
 Card.defaultProps = {
@@ -58,8 +57,7 @@ Card.defaultProps = {
   cursor: 'initial',
   image: imageDefault,
   level: null,
-  name: i18n.t('PAGES.COLLECTION.CARD.NAME'),
-  selected: false
+  name: i18n.t('PAGES.COLLECTION.CARD.NAME')
 }
 
 export default Card

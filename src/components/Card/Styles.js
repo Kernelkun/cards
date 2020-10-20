@@ -8,12 +8,12 @@ export default makeStyles(theme => ({
     backgroundSize: 'cover',
     color: theme.palette.common.white,
     cursor: ({ cursor }) => cursor,
-    height: ({ selected }) => (selected ? theme.spacing(64.375) : 'inherit'),
-    minHeight: ({ selected }) => (!selected ? theme.spacing(49.375) : 'unset'),
-    position: 'relative',
-    width: theme.spacing(30.625),
-    zoom: ({ selected }) => (selected ? 1.1 : 'unset'),
-    zIndex: ({ selected }) => (selected ? 10 : 'unset')
+    height: ({ cardSelected }) => (cardSelected ? theme.spacing(64.375) : 'inherit'),
+    minHeight: ({ cardSelected }) => (!cardSelected ? theme.spacing(49.375) : 'unset'),
+    position: ({ cardSelected }) => (cardSelected ? 'absolute' : 'relative'),
+    width: ({ cardSelected }) => (cardSelected ? '322px' : theme.spacing(30.625)),
+    zoom: ({ cardSelected }) => (cardSelected ? 1.1 : 'unset'),
+    zIndex: ({ cardSelected }) => (cardSelected ? 10 : 'unset')
   },
   level: {
     fontSize: theme.spacing(3.604)
@@ -28,8 +28,8 @@ export default makeStyles(theme => ({
     textTransform: 'uppercase'
   },
   overlayColor: {
-    background: ({ selected }) =>
-      selected
+    background: ({ cardSelected }) =>
+      cardSelected
         ? theme.palette.primary.main
         : 'linear-gradient(201.73deg,#072fdc -4.92%,#0596a1 85.75%)',
     opacity: 0.7,
