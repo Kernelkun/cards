@@ -4,4 +4,5 @@ plop-templates
 public
 src/serviceWorker.js
 src/support/network/
+src/components/Slider
 src/stories

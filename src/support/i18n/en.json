@@ -8,6 +8,7 @@
     "NOT_FOUND_FOR": "Nothing found searching for '%{search}'",
     "SEARCH": "Search",
     "SEARCH_DEFAULT": "Search for anything...",
+    "SEE_ALL": "See all",
     "SUBMIT": "Submit",
     "SUCCESS": "Success",
     "UPDATE": "Update",
@@ -44,6 +45,9 @@
         "COLLECTION": "Collection",
         "GO_TO_COLLECTION": "Go to collection",
         "PARAGRAPH": "Build your own interactive card collection and let your community become a part of the show. No matter what you stream, level up your content with Streamloots. From choosing the character the streamer is going to play with, displaying a message in the screen or making the streamer drop the guns in the game, to really fun things such as making them sing or dress up as a dinosaur. Everything is possible because every streamer defines the type of interactions they want to have with their viewers!"
+      },
+      "OFFERS": {
+        "NEWS": "News"
       }
     }
   },
