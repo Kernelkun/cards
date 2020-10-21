@@ -1,18 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Typography } from '@material-ui/core'
+import clsx from 'clsx'
 import Image from 'components/Image'
 import SegaButton from 'components/SegaButton'
 import dots from 'img/dots.svg'
 import ball from 'img/ball.svg'
 import i18n from 'support/i18n'
-import useStyles from './Styles'
 import OfferSlider from './components/OfferSlider'
+import useStyles from './Styles'
 
-const Offers = () => {
+const Offers = ({ className }) => {
   const classes = useStyles()
 
   return (
-    <section className={classes.container}>
+    <section className={clsx(className, classes.container)}>
       <div className={classes.bg} />
       <div className={classes.dots}>
         <Image src={dots} />
@@ -30,8 +32,12 @@ const Offers = () => {
   )
 }
 
-Offers.propTypes = {}
+Offers.propTypes = {
+  className: PropTypes.node
+}
 
-Offers.defaultProps = {}
+Offers.defaultProps = {
+  className: ''
+}
 
 export default Offers
