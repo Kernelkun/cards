@@ -1,6 +1,8 @@
 import React from 'react'
 import { Section } from 'components/Section'
 import i18n from 'support/i18n'
+import Video from 'components/Video'
+import xbox from 'img/xbox.webm'
 import Collection from './components/Collection'
 import Advertising from './components/Advertising'
 import Offers from './components/Offers'
@@ -11,7 +13,9 @@ const Home = () => {
 
   return (
     <Section>
-      <div style={{ height: '100vh', minHeight: '700px', background: 'pink' }}>VIDEO</div>
+      <div className={classes.video}>
+        <Video src={xbox} />
+      </div>
       <Section sega>
         <Offers className={classes.offers} />
         <Collection />

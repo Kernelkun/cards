@@ -24,7 +24,7 @@ const Collection = () => {
             <Image src={plus} />
           </div>
         </Grid>
-        <Grid container justify="center" alignItems="center" sm={12}>
+        <Grid container justify="center" alignItems="center" item sm={12}>
           <Grid container item direction="column" sm={5}>
             <Typography component="h2" variant="h3">
               {i18n.t('PAGES.HOME.COLLECTION.COLLECTION')}
