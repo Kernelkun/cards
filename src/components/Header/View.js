@@ -1,6 +1,7 @@
 import React from 'react'
+import AppBar from 'components/AppBar'
 
-const Header = () => <header>Header</header>
+const Header = () => <AppBar />
 
 Header.propTypes = {}
 

@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 import bg from 'img/sega_bg.png'
+import illustration from 'img/illustration.webp'
 
 export default makeStyles(theme => ({
   bg: {
@@ -14,7 +15,6 @@ export default makeStyles(theme => ({
     position: 'absolute'
   },
   container: {
-    marginTop: '90px',
     position: 'relative',
     background: 'linear-gradient(90deg,#187aff,#1148e4 50%,#06aab4)',
     color: theme.palette.common.white,
@@ -22,6 +22,7 @@ export default makeStyles(theme => ({
     height: '45em'
   },
   illustration: {
+    backgroundImage: `url(${illustration})`,
     backgroundSize: 'cover',
     backgroundPosition: '50%',
     clipPath: 'polygon(0 0,100% 0,100% 100%,29% 100%)',

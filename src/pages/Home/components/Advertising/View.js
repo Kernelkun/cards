@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Grid } from '@material-ui/core'
 import Typography from '@material-ui/core/Typography'
-import Image from 'components/Image'
-import illustration from 'img/illustration.webp'
+import SegaButton from 'components/SegaButton'
 import i18n from 'support/i18n'
 import useStyles from './Styles'
-import SegaButton from '../../../../components/SegaButton'
 
 const Advertising = ({ children, title }) => {
   const classes = useStyles()
@@ -34,9 +32,7 @@ const Advertising = ({ children, title }) => {
         </Grid>
       </div>
       <div className={classes.bg} />
-      <div className={classes.illustration}>
-        <Image src={illustration} />
-      </div>
+      <div className={classes.illustration} />
     </section>
   )
 }

@@ -16,8 +16,8 @@ const Home = () => {
       <div className={classes.video}>
         <Video src={xbox} />
       </div>
-      <Section sega>
-        <Offers className={classes.offers} />
+      <Section className={classes.container} sega>
+        <Offers />
         <Collection />
         <Advertising title={i18n.t('PAGES.HOME.ADVERTISING.TITLE')}>
           {i18n.t('PAGES.HOME.ADVERTISING.PARAGRAPH')}

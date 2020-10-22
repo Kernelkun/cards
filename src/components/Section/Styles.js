@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 export default makeStyles(theme => ({
   container: {
     position: 'relative',
-    paddingTop: '5em',
     background: ({ color, sega }) =>
       !sega && (color === 'inherit' ? 'inherit' : theme.palette[color].main),
     minHeight: 'calc(100vh - 64px - 230px)'
