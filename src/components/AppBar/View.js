@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
@@ -19,7 +20,7 @@ const AppBar = () => {
 
   return (
     <div className={classes.container}>
-      <Image className={classes.logo} src={StreamLootsLogo} />
+      <Image className={clsx(trigger && 'slide-in-top', classes.logo)} src={StreamLootsLogo} />
       <NavBar classes={{ positionFixed: classes.navBar }} position="fixed">
         <Toolbar style={{ height: '100%', padding: 0 }}>
           <Hidden mdUp>
@@ -33,7 +34,7 @@ const AppBar = () => {
             </IconButton>
           </Hidden>
           <Grid
-            className={classes.menu}
+            className={clsx(classes.menu, trigger && 'move-right')}
             container
             direction="row"
             alignItems="center"

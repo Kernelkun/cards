@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import theme from '../Theme/theme'
 
 export default makeStyles(() => ({
   button: {
@@ -39,12 +40,28 @@ export default makeStyles(() => ({
     width: '2px !important'
   },
   logo: {
-    // position: 'absolute',
-    // top: 0,
-    // left: 0
+    '&.slide-out-top': {
+      WebkitAnimation: 'slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
+      animation: 'slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both'
+    },
+    '&.slide-in-top': {
+      WebkitAnimation: 'slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+      animation: 'slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
+    },
+    WebkitTransform: 'translateY(-1000px)',
+    transform: 'translateY(-1000px)',
+    opacity: 0,
+    position: 'fixed',
+    top: '25px',
+    left: '5%',
+    zIndex: theme.zIndex.appBar + 1
   },
   menu: {
-    paddingLeft: ({ trigger }) => (trigger ? '15%' : '5%'),
+    '&.move-right': {
+      WebkitAnimation: 'move-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+      animation: 'move-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
+    },
+    // paddingLeft: ({ trigger }) => (trigger ? '15%' : '5%'),
     height: '100%'
   },
   navBar: {
@@ -57,7 +74,7 @@ export default makeStyles(() => ({
     width: '100%',
     marginLeft: 0,
     transform: 'translateX(-50%)',
-    top: '35px',
+    top: '50px',
     clipPath: 'polygon(3.5% 0,99% 0%,96.5% 100%,1% 100%)'
   }
 }))
