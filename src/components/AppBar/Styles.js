@@ -61,7 +61,11 @@ export default makeStyles(() => ({
       WebkitAnimation: 'move-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
       animation: 'move-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
     },
-    // paddingLeft: ({ trigger }) => (trigger ? '15%' : '5%'),
+    '&.move-left': {
+      WebkitAnimation: 'move-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+      animation: 'move-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
+    },
+    paddingLeft: '5%',
     height: '100%'
   },
   navBar: {

@@ -65,6 +65,23 @@
   }
 }
 
+@-webkit-keyframes move-left {
+  0% {
+    padding-left: 15%;
+  }
+  100% {
+    padding-left: 5%;
+  }
+}
+@keyframes move-left {
+  0% {
+    padding-left: 15%;
+  }
+  100% {
+    padding-left: 5%;
+  }
+}
+
 
 body {
   margin: 0;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import clsx from 'clsx'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
@@ -14,13 +14,25 @@ import StreamLootsLogo from 'img/streamloots-logo.svg'
 import useStyles from './Styles'
 
 const AppBar = () => {
+  const [out, setOut] = useState(false)
   const preventDefault = event => event.preventDefault()
-  const trigger = useScrollTrigger({ disableHysteresis: true })
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 })
   const classes = useStyles({ trigger })
+
+  useEffect(() => {
+    if (trigger && !out) setOut(true)
+  }, [trigger])
 
   return (
     <div className={classes.container}>
-      <Image className={clsx(trigger && 'slide-in-top', classes.logo)} src={StreamLootsLogo} />
+      <Image
+        className={clsx(
+          trigger && 'slide-in-top',
+          !trigger && out && 'slide-out-top',
+          classes.logo
+        )}
+        src={StreamLootsLogo}
+      />
       <NavBar classes={{ positionFixed: classes.navBar }} position="fixed">
         <Toolbar style={{ height: '100%', padding: 0 }}>
           <Hidden mdUp>
@@ -34,7 +46,7 @@ const AppBar = () => {
             </IconButton>
           </Hidden>
           <Grid
-            className={clsx(classes.menu, trigger && 'move-right')}
+            className={clsx(classes.menu, trigger && 'move-right', !trigger && out && 'move-left')}
             container
             direction="row"
             alignItems="center"
