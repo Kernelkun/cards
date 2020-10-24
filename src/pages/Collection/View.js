@@ -17,14 +17,16 @@ const Collection = ({ cards, collectionName, getCards }) => {
   return (
     <Section sega>
       <SectionItem>
-        <SearchBlock avatar={CollectionIcon} collectionName={collectionName} />
-        <Grid className={classes.cardContainer} justify="center" container spacing={1}>
-          {cards.map(card => (
-            <Grid item container justify="center" key={card.id} md={3} sm={4} xs={12}>
-              <Card image={card.image} name={card.name} count={card.count.total} />
-            </Grid>
-          ))}
-        </Grid>
+        <div className={classes.container}>
+          <SearchBlock avatar={CollectionIcon} collectionName={collectionName} />
+          <Grid className={classes.cardContainer} justify="center" container spacing={1}>
+            {cards.map(card => (
+              <Grid item container justify="center" key={card.id} md={3} sm={4} xs={12}>
+                <Card image={card.image} name={card.name} count={card.count.total} />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
       </SectionItem>
     </Section>
   )
