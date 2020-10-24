@@ -79,6 +79,13 @@ export default makeStyles(() => ({
     marginLeft: 0,
     transform: 'translateX(-50%)',
     top: '50px',
-    clipPath: 'polygon(3.5% 0,99% 0%,96.5% 100%,1% 100%)'
+    clipPath: 'polygon(3.5% 0,99% 0%,96.5% 100%,1% 100%)',
+    [theme.breakpoints.down('md')]: {
+      height: theme.spacing(8.25)
+    }
+  },
+  toolbar: {
+    height: '100%',
+    padding: 0
   }
 }))

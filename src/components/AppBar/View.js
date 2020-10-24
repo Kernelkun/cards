@@ -36,7 +36,7 @@ const AppBar = () => {
         src={StreamLootsLogo}
       />
       <NavBar classes={{ positionFixed: classes.navBar }} position="fixed">
-        <Toolbar style={{ height: '100%', padding: 0 }}>
+        <Toolbar className={classes.toolbar}>
           <Hidden mdUp>
             <IconButton
               edge="start"
