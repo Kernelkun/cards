@@ -9,6 +9,7 @@ import { Section, SectionItem } from 'components/Section'
 import CollectionIcon from 'img/collection_icon_001.png'
 import SearchBlock from './components/SearchBlock'
 import useStyles from './Styles'
+import paths from '../../constans/paths'
 
 const Collection = ({ cards, collectionName, getCards }) => {
   const classes = useStyles()
@@ -39,7 +40,7 @@ const Collection = ({ cards, collectionName, getCards }) => {
             <Grid className={classes.cardContainer} justify="center" container spacing={1}>
               {cards.map(card => (
                 <Grid item container justify="center" key={card.id} md={3} sm={4} xs={12}>
-                  <Card image={card.image} name={card.name} count={card.count.total} />
+                  <Card cursor="pointer" image={card.image} to={`${paths.CARD}${card.id}`} />
                 </Grid>
               ))}
             </Grid>

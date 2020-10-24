@@ -1,5 +1,6 @@
 export default {
-  CARD: '/collection/:collectionId/:cardId',
+  CARD: '/collection/card/',
+  CARD_ID: '/collection/card/:cardId',
   COLLECTION: '/collection',
   COLLECTION_DETAIL: '/collection/:collectionId',
   DASHBOARD: '/dashboard',

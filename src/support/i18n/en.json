@@ -3,6 +3,7 @@
     "ACCEPT": "Accept",
     "ADD": "Add",
     "CANCEL": "Cancel",
+    "EDIT": "Edit",
     "NO": "No",
     "NOT_FOUND": "Nothing could be found",
     "NOT_FOUND_FOR": "Nothing found searching for '%{search}'",

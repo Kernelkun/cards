@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import ScrollToTop from 'components/ScrollToTop'
 import PrivateRoute from 'components/PrivateRoute'
 import paths from 'constans/paths'
+import Card from 'pages/Card'
 import Collection from 'pages/Collection'
 import Dashboard from 'pages/Dashboard'
 import Home from 'pages/Home'
@@ -15,8 +16,8 @@ const Router = () => {
     <BrowserRouter basename={baseUrl}>
       <ScrollToTop />
       <Switch>
-        <PrivateRoute exact path={paths.CARD}>
-          <p>CARD</p>
+        <PrivateRoute exact path={paths.CARD_ID}>
+          <Card />
         </PrivateRoute>
         <PrivateRoute exact path={paths.COLLECTION}>
           <Collection />

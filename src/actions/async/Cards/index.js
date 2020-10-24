@@ -1,4 +1,4 @@
-import { loadCards } from 'services/Cards'
+import { loadCards, loadCardsById } from 'services/Cards'
 import * as type from './Constants'
 
 const parseCards = data => {
@@ -19,5 +19,19 @@ export const getCards = () => dispatch => {
       data => dispatch({ type: type.GET_CARDS_SUCCESS, data: parseCards(data) }),
       error =>
         dispatch({ type: type.GET_CARDS_FAILURE, error: error.message || 'Unexpected Error!!!' })
+    )
+}
+
+export const getCardsById = id => dispatch => {
+  dispatch({ type: type.GET_CARDS_BY_ID_STARTED })
+  loadCardsById(id)
+    .then(response => response.json())
+    .then(
+      data => dispatch({ type: type.GET_CARDS_BY_ID_SUCCESS, data: parseCards(data) }),
+      error =>
+        dispatch({
+          type: type.GET_CARDS_BY_ID_FAILURE,
+          error: error.message || 'Unexpected Error!!!'
+        })
     )
 }

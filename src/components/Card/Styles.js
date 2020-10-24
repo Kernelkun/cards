@@ -15,6 +15,11 @@ export default makeStyles(theme => ({
     zoom: ({ cardSelected }) => (cardSelected ? 1.1 : 'unset'),
     zIndex: ({ cardSelected }) => (cardSelected ? 10 : 'unset')
   },
+  editButton: {
+    color: theme.palette.common.white,
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
+  },
   level: {
     fontSize: theme.spacing(3.604)
   },
@@ -28,9 +33,9 @@ export default makeStyles(theme => ({
     textTransform: 'uppercase'
   },
   overlayColor: {
-    background: ({ cardSelected }) =>
-      cardSelected
-        ? theme.palette.primary.main
+    background: ({ over }) =>
+      over
+        ? theme.palette.common.black
         : 'linear-gradient(201.73deg,#072fdc -4.92%,#0596a1 85.75%)',
     opacity: 0.7,
     position: 'absolute',

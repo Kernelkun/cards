@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
+import ButtonBase from '@material-ui/core/ButtonBase'
+import EditIcon from '@material-ui/icons/Edit'
 import Grid from '@material-ui/core/Grid'
 import { Typography } from '@material-ui/core'
 import imageDefault from 'img/default_img_card.webp'
@@ -9,11 +12,22 @@ import CardTextNumber from './components/CardTextNumber'
 import Mountains from './components/Mountains'
 import useStyles from './Styles'
 
-const Card = ({ className, count, cursor, image, level, name }) => {
-  const classes = useStyles({ cursor, image })
+const Card = ({ className, count, cursor, image, level, name, to }) => {
+  const [over, setOver] = useState(false)
+  const history = useHistory()
+  const classes = useStyles({ cursor, image, over })
+
+  const handleClick = () => {
+    if (to) history.push(to)
+  }
 
   return (
-    <div className={clsx(classes.container, className)}>
+    <ButtonBase
+      className={clsx(classes.container, className)}
+      onMouseEnter={() => setOver(true)}
+      onMouseLeave={() => setOver(false)}
+      onClick={handleClick}
+    >
       <div className={classes.overlayColor} />
       <div className={classes.overlayInformation}>
         <Grid
@@ -28,17 +42,37 @@ const Card = ({ className, count, cursor, image, level, name }) => {
                 {level}
               </Typography>
             )}
-            <CardTextNumber color="white">{count}</CardTextNumber>
-            <Mountains color="white" className={classes.mountains} />
+            {count && (
+              <>
+                <CardTextNumber color="white">{count}</CardTextNumber>
+                <Mountains color="white" className={classes.mountains} />
+              </>
+            )}
           </Grid>
+
+          {over && (
+            <Grid container direction="column" item justify="center" alignItems="center">
+              <Grid item xs>
+                <EditIcon fontSize="large" />
+              </Grid>
+              <Grid item xs>
+                <Typography className={classes.editButton} variant="body1">
+                  {i18n.t('COMMON.EDIT')}
+                </Typography>
+              </Grid>
+            </Grid>
+          )}
+
           <Grid container item justify="center" alignItems="center">
-            <Typography align="center" className={classes.name}>
-              {name}
-            </Typography>
+            {name && (
+              <Typography align="center" className={classes.name}>
+                {name}
+              </Typography>
+            )}
           </Grid>
         </Grid>
       </div>
-    </div>
+    </ButtonBase>
   )
 }
 
@@ -48,16 +82,18 @@ Card.propTypes = {
   cursor: PropTypes.string,
   image: PropTypes.string,
   level: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  to: PropTypes.string
 }
 
 Card.defaultProps = {
   className: '',
-  count: 0,
+  count: null,
   cursor: 'initial',
   image: imageDefault,
   level: null,
-  name: i18n.t('PAGES.COLLECTION.CARD.NAME')
+  name: null,
+  to: null
 }
 
 export default Card

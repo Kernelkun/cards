@@ -6,3 +6,9 @@ export const loadCards = () => {
     method: 'GET'
   })
 }
+export const loadCardsById = id => {
+  const uri = `${API_BASE_ADDRESS}/cards?_id=${id}`
+  return fetch(uri, {
+    method: 'GET'
+  })
+}
