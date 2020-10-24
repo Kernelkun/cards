@@ -21,11 +21,8 @@ const OfferSlider = () => {
           initialIndex: 0
         }}
       >
-        {images.map((image, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <div key={index}>
-            <img data-flickity-lazyload={image} alt="" />
-          </div>
+        {images.map(image => (
+          <img key={`${new Date()}`} data-flickity-lazyload={image} alt="" />
         ))}
       </Slider>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { Theme as ThemeProvider } from 'components/Theme'
-import { Root as RootNavigator } from 'support/navigation'
+import Router from 'support/navigation'
 import { store } from 'store'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <React.StrictMode>
       <Provider store={store}>
         <ThemeProvider>
-          <RootNavigator />
+          <Router />
         </ThemeProvider>
       </Provider>
     </React.StrictMode>

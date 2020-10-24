@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import clsx from 'clsx'
+import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
@@ -9,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import NavBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger'
+import paths from 'constans/paths'
 import Image from 'components/Image'
 import StreamLootsLogo from 'img/streamloots-logo.svg'
 import useStyles from './Styles'
@@ -21,7 +23,7 @@ const AppBar = () => {
 
   useEffect(() => {
     if (trigger && !out) setOut(true)
-  }, [trigger])
+  }, [out, trigger])
 
   return (
     <div className={classes.container}>
@@ -62,7 +64,12 @@ const AppBar = () => {
             >
               <Grid container justify="center" item md={2}>
                 <div className={classes.clip}>
-                  <Button className={classes.button} onClick={preventDefault} variant="text">
+                  <Button
+                    className={classes.button}
+                    component={Link}
+                    variant="text"
+                    to={paths.HOME}
+                  >
                     Home
                   </Button>
                 </div>
@@ -72,7 +79,12 @@ const AppBar = () => {
 
               <Grid container justify="center" item md={2}>
                 <div className={classes.clip}>
-                  <Button className={classes.button} onClick={preventDefault} variant="text">
+                  <Button
+                    className={classes.button}
+                    component={Link}
+                    variant="text"
+                    to={paths.COLLECTION}
+                  >
                     Collection
                   </Button>
                 </div>
@@ -82,7 +94,12 @@ const AppBar = () => {
 
               <Grid container justify="center" item md={2}>
                 <div className={classes.clip}>
-                  <Button className={classes.button} onClick={preventDefault} variant="text">
+                  <Button
+                    className={classes.button}
+                    component={Link}
+                    variant="text"
+                    to={paths.HOME}
+                  >
                     Sega 60th
                   </Button>
                 </div>

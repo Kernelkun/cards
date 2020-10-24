@@ -5,7 +5,6 @@ import Video from 'components/Video'
 import xbox from 'img/xbox.webm'
 import Collection from './components/Collection'
 import Advertising from './components/Advertising'
-import Offers from './components/Offers'
 import useStyles from './Styles'
 
 const Home = () => {
@@ -17,7 +16,6 @@ const Home = () => {
         <Video src={xbox} />
       </div>
       <Section className={classes.container} sega>
-        <Offers />
         <Collection />
         <Advertising title={i18n.t('PAGES.HOME.ADVERTISING.TITLE')}>
           {i18n.t('PAGES.HOME.ADVERTISING.PARAGRAPH')}

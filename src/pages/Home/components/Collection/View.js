@@ -1,6 +1,8 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
 import { Typography } from '@material-ui/core'
+import paths from 'constans/paths'
 import Image from 'components/Image'
 import { SectionItem } from 'components/Section'
 import SegaButton from 'components/SegaButton'
@@ -12,6 +14,8 @@ import useStyles from './Styles'
 
 const Collection = () => {
   const classes = useStyles()
+  const history = useHistory()
+  const handleGoToCollection = () => history.push(paths.COLLECTION)
 
   return (
     <section className={classes.container}>
@@ -33,7 +37,7 @@ const Collection = () => {
               {i18n.t('PAGES.HOME.COLLECTION.PARAGRAPH')}
             </Typography>
 
-            <SegaButton color="secondary">
+            <SegaButton onClick={handleGoToCollection} color="secondary">
               {i18n.t('PAGES.HOME.COLLECTION.GO_TO_COLLECTION')}
             </SegaButton>
           </Grid>
