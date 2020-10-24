@@ -1,14 +1,18 @@
 import * as type from 'actions/async/Cards/Constants'
 
 const initialState = {
-  card: [],
-  list: [],
+  card: {},
   error: '',
-  loading: false
+  list: [],
+  loading: false,
+  search: '',
+  filter: ''
 }
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
+    case type.SET_CARDS_BY_ID_STARTED:
+    case type.GET_CARDS_BY_ID_STARTED:
     case type.GET_CARDS_STARTED: {
       return {
         ...state,
@@ -22,19 +26,6 @@ const authReducer = (state = initialState, action) => {
         list: action.data
       }
     }
-    case type.GET_CARDS_FAILURE: {
-      return {
-        ...state,
-        loading: false,
-        error: action.error
-      }
-    }
-    case type.GET_CARDS_BY_ID_STARTED: {
-      return {
-        ...state,
-        loading: true
-      }
-    }
     case type.GET_CARDS_BY_ID_SUCCESS: {
       return {
         ...state,
@@ -42,7 +33,16 @@ const authReducer = (state = initialState, action) => {
         card: action.data[0]
       }
     }
-    case type.GET_CARDS_BY_ID_FAILURE: {
+    case type.SET_CARDS_BY_ID_SUCCESS: {
+      return {
+        ...state,
+        loading: false,
+        card: action.data[0]
+      }
+    }
+    case type.SET_CARDS_BY_ID_FAILURE:
+    case type.GET_CARDS_BY_ID_FAILURE:
+    case type.GET_CARDS_FAILURE: {
       return {
         ...state,
         loading: false,

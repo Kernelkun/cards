@@ -26,8 +26,8 @@
     "UNKNOWN": "Unknown error"
   },
   "FORM": {
-    "NAME": "Name",
-    "URL": "URL"
+    "CARD_NAME": "Card name",
+    "IMAGE_URL": "Image URL"
   },
   "PAGES": {
     "DASHBOARD": {},
@@ -41,6 +41,9 @@
         "TITLE": "Edit your card image with the Streamloots' Card Creator",
         "PARAGRAPH": "It can be used with Streamloots Originals or with cards generated with the Streamlots' Card Creator. The Streamloots Originals and the cards created with the Streamloots' Card Creator can now be edited. Before this change, you had to create the card from 0, but now you can do all the canges you want and save without having to create a new card.",
         "FIND_OUT": "Find out more"
+      },
+      "CARD": {
+        "EDIT_CARD": "Edit card"
       },
       "COLLECTION": {
         "COLLECTION": "Collection",

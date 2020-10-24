@@ -6,9 +6,21 @@ export const loadCards = () => {
     method: 'GET'
   })
 }
+
 export const loadCardsById = id => {
-  const uri = `${API_BASE_ADDRESS}/cards?_id=${id}`
+  const uri = `${API_BASE_ADDRESS}/cards/${id}`
   return fetch(uri, {
     method: 'GET'
+  })
+}
+
+export const patchCardById = ({ id, data }) => {
+  const uri = `${API_BASE_ADDRESS}/cards/${id}`
+  return fetch(uri, {
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'PATCH'
   })
 }

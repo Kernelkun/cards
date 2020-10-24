@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { getCardsById } from 'actions/async/Cards'
+import { getCardsById, updateCardById } from 'actions/async/Cards'
 import View from './View'
 
 const mapStateToProps = state => ({
@@ -7,7 +7,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  getCardsById
+  getCardsById,
+  updateCardById
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(View)
