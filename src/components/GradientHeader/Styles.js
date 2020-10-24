@@ -37,20 +37,10 @@ export default makeStyles(theme => ({
     }
   },
   wrapper: {
-    // position: 'absolute',
-    // top: '0',
-    // left: '0',
-    // right: '0',
-    // bottom: '0'
     boxSizing: 'border-box',
     color: theme.palette.common.white,
-    textAlign: 'center',
-    marginBottom: '30px',
-    top: '50%',
-    position: 'absolute',
     width: '100%',
-    padding: '0 20px',
-    transform: 'translateY(-50%)',
-    left: '0'
+    height: '100%',
+    padding: '0 20px'
   }
 }))

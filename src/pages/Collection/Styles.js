@@ -6,5 +6,8 @@ export default makeStyles(theme => ({
   },
   cardContainer: {
     marginTop: theme.spacing(4)
+  },
+  rareBar: {
+    marginTop: theme.spacing(2)
   }
 }))

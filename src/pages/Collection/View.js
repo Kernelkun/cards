@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Card from 'components/Card'
+import GradientHeader from 'components/GradientHeader'
+import RareBar from 'components/RareBar'
 import { Section, SectionItem } from 'components/Section'
 import CollectionIcon from 'img/collection_icon_001.png'
 import SearchBlock from './components/SearchBlock'
 import useStyles from './Styles'
-import GradientHeader from '../../components/GradientHeader'
 
 const Collection = ({ cards, collectionName, getCards }) => {
   const classes = useStyles()
@@ -19,9 +20,17 @@ const Collection = ({ cards, collectionName, getCards }) => {
   return (
     <>
       <GradientHeader>
-        <Typography component="h1" variant="h3">
-          Collection
-        </Typography>
+        <Grid container style={{ paddingTop: '3em' }}>
+          <Grid container item md={12} justify="center">
+            <Typography component="h1" variant="h3">
+              Collection
+            </Typography>
+          </Grid>
+
+          <Grid container justify="center">
+            <RareBar className={classes.rareBar} />
+          </Grid>
+        </Grid>
       </GradientHeader>
       <Section sega>
         <SectionItem>

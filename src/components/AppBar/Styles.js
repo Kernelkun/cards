@@ -54,7 +54,10 @@ export default makeStyles(() => ({
     position: 'fixed',
     top: '25px',
     left: '5%',
-    zIndex: theme.zIndex.appBar + 1
+    zIndex: theme.zIndex.appBar + 1,
+    [theme.breakpoints.down('md')]: {
+      width: '8%'
+    }
   },
   menu: {
     '&.move-right': {
