@@ -54,10 +54,10 @@ const Card = ({ card: { id, name, image }, getCardsById, updateCardById }) => {
               justify="center"
               style={{ height: '100%' }}
             >
-              <Grid container justify="center" alignItems="center" item md>
+              <Grid container justify="center" alignItems="center" item md sm xs>
                 <Image src={image} />
               </Grid>
-              <Grid container alignItems="center" justify="center" item md>
+              <Grid container alignItems="center" justify="center" item md sm xs>
                 <TextField
                   className={classes.textField}
                   color="secondary"
@@ -71,7 +71,7 @@ const Card = ({ card: { id, name, image }, getCardsById, updateCardById }) => {
                   variant="outlined"
                 />
               </Grid>
-              <Grid container alignItems="center" justify="center" item md>
+              <Grid container alignItems="center" justify="center" item md sm xs>
                 <TextField
                   className={classes.textField}
                   color="secondary"
@@ -85,7 +85,7 @@ const Card = ({ card: { id, name, image }, getCardsById, updateCardById }) => {
                   variant="outlined"
                 />
               </Grid>
-              <Grid container alignItems="center" justify="center" item md>
+              <Grid container alignItems="center" justify="center" item md sm xs>
                 <SegaButton type="submit" color="secondary">
                   {i18n.t('COMMON.SUBMIT')}
                 </SegaButton>

@@ -15,6 +15,14 @@ export default makeStyles(theme => ({
     '& img': {
       width: '40%',
       marginBottom: theme.spacing(4)
+    },
+    [theme.breakpoints.down(361)]: {
+      top: '0',
+      left: '0',
+      width: '100%',
+      border: '0',
+      height: '100%',
+      transform: 'unset'
     }
   },
   textField: {
