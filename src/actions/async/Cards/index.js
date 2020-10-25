@@ -11,9 +11,12 @@ const parseCards = data => {
   }))
 }
 
-export const getCards = () => dispatch => {
+export const getCards = () => (dispatch, getState) => {
+  const {
+    cards: { filter }
+  } = getState()
   dispatch({ type: type.GET_CARDS_STARTED })
-  loadCards()
+  loadCards(filter)
     .then(response => response.json())
     .then(
       data => dispatch({ type: type.GET_CARDS_SUCCESS, data: parseCards(data) }),

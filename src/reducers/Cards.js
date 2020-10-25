@@ -1,4 +1,5 @@
 import * as type from 'actions/async/Cards/Constants'
+import { SET_FILTER } from 'actions/sync/Cards/Constants'
 
 const initialState = {
   card: {},
@@ -47,6 +48,12 @@ const authReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.error
+      }
+    }
+    case SET_FILTER: {
+      return {
+        ...state,
+        filter: action.filter
       }
     }
     default:

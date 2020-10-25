@@ -11,12 +11,12 @@ import SearchBlock from './components/SearchBlock'
 import useStyles from './Styles'
 import paths from '../../constans/paths'
 
-const Collection = ({ cards, collectionName, getCards }) => {
+const Collection = ({ cards, collectionName, filter, getCards, setFilter }) => {
   const classes = useStyles()
 
   useEffect(() => {
     getCards()
-  }, [getCards])
+  }, [getCards, filter])
 
   return (
     <>
@@ -29,7 +29,7 @@ const Collection = ({ cards, collectionName, getCards }) => {
           </Grid>
 
           <Grid container justify="center">
-            <RareBar className={classes.rareBar} />
+            <RareBar className={classes.rareBar} setFilter={setFilter} />
           </Grid>
         </Grid>
       </GradientHeader>
@@ -61,11 +61,14 @@ Collection.propTypes = {
     })
   ),
   collectionName: PropTypes.string.isRequired,
-  getCards: PropTypes.func.isRequired
+  filter: PropTypes.string,
+  getCards: PropTypes.func.isRequired,
+  setFilter: PropTypes.func.isRequired
 }
 
 Collection.defaultProps = {
-  cards: []
+  cards: [],
+  filter: ''
 }
 
 export default Collection
