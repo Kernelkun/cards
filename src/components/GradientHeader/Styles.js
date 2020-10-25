@@ -2,12 +2,15 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
   container: {
-    height: 418,
+    height: theme.spacing(52.25),
     position: 'relative',
     background: 'linear-gradient(259.29deg,#072fdc -2.5%,#0596a1 77.19%)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50%',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    [theme.breakpoints.down(361)]: {
+      height: theme.spacing(63.75)
+    }
   },
   diamond: {
     position: 'absolute',
@@ -34,6 +37,10 @@ export default makeStyles(theme => ({
     zIndex: 1,
     '& img': {
       width: 59
+    },
+    [theme.breakpoints.down('xs')]: {
+      left: '50%',
+      transform: 'translateX(-50%)'
     }
   },
   wrapper: {

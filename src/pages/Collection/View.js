@@ -23,13 +23,17 @@ const Collection = ({ cards, collectionName, filter, getCards, setFilter, setSea
       <GradientHeader>
         <Grid container style={{ paddingTop: '3em' }}>
           <Grid container item md={12} justify="center">
-            <Typography component="h1" variant="h3">
+            <Typography className={classes.title} component="h1" variant="h3">
               Collection
             </Typography>
           </Grid>
 
           <Grid container justify="center">
-            <RareBar className={classes.rareBar} setFilter={setFilter} />
+            <Grid item sm xs />
+            <Grid container item justify="center" sm={7} xs={12}>
+              <RareBar className={classes.rareBar} setFilter={setFilter} />
+            </Grid>
+            <Grid item sm xs />
           </Grid>
         </Grid>
       </GradientHeader>

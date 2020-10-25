@@ -20,7 +20,7 @@ export default makeStyles(theme => ({
   },
   searchContainer: {
     [theme.breakpoints.down('xs')]: {
-      marginTop: theme.spacing(2)
+      marginTop: theme.spacing(4)
     }
   },
   input: {

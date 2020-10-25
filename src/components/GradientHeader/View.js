@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
+import Hidden from '@material-ui/core/Hidden'
 import Image from 'components/Image'
 import dots from 'img/dots.svg'
 import diamond from 'img/diamond.svg'
@@ -12,12 +13,14 @@ const GradientHeader = ({ children }) => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.diamond}>
-        <Image src={diamond} />
-      </div>
-      <div className={classes.dots}>
-        <Image src={dots} />
-      </div>
+      <Hidden xsDown>
+        <div className={classes.diamond}>
+          <Image src={diamond} />
+        </div>
+        <div className={classes.dots}>
+          <Image src={dots} />
+        </div>
+      </Hidden>
       <div className={classes.mountains}>
         <Image src={mountains} />
       </div>
