@@ -1,6 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cards!
 
-## Available Scripts
+We love them.
+
+## Quick setup
+
+Install the dependencies:
+```shell script
+yarn
+```
+
+In one terminal, we are going to launch the web server:
+```shell script
+yarn start
+```
+
+In another terminal, we are going to launch the mocked server:
+```shell script
+yarn server
+```
+
+That's it, enjoy!
+
+## Some available Scripts
 
 In the project directory, you can run:
 
@@ -12,10 +33,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `yarn server`
+
+Launches the json-server, thanks to the one, I can make network calls to get the data.
+
+It's really cool and only takes 30 seconds to build up. Check it out! [Here](https://github.com/typicode/json-server)
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+There is no test right now, that's make me sad 😢
 
 ### `yarn build`
 
@@ -27,42 +55,29 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `yarn prettier`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+We can apply a pretty cool formatting style. This really shines when we work in a team, but I really love work with 
+Prettier.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `yarn eslint`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This is the AirBnb ESLint config. It's really strict, but I fell in love with it since I worked with it in a project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `yarn lint`
 
-## Learn More
+It's the final combo! I used to the pre-commit. Apply the format and check the lint before committing... A crime.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `yarn plop`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Really cool tool, you can add all the templates you want to make new components, pages, services, reducers... Whatever 
+you want. It's really helpful in every project, but it's shines when you want consistency in your code.
 
-### Code Splitting
+### `yarn storybook`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Ah! The good Storybook. The perfect tool to document all our components and make a great Design system. Unfortunately
+I couldn't fill it with content, but it's enough for showing the tool and start talking about Design Systems.
 
-### Analyzing the Bundle Size
+<hr /> 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was made with ❤️
