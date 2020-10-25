@@ -11,7 +11,7 @@ import SearchBlock from './components/SearchBlock'
 import useStyles from './Styles'
 import paths from '../../constans/paths'
 
-const Collection = ({ cards, collectionName, filter, getCards, setFilter }) => {
+const Collection = ({ cards, collectionName, filter, getCards, setFilter, setSearch }) => {
   const classes = useStyles()
 
   useEffect(() => {
@@ -36,7 +36,11 @@ const Collection = ({ cards, collectionName, filter, getCards, setFilter }) => {
       <Section sega>
         <SectionItem>
           <div className={classes.container}>
-            <SearchBlock avatar={CollectionIcon} collectionName={collectionName} />
+            <SearchBlock
+              avatar={CollectionIcon}
+              collectionName={collectionName}
+              setSearch={setSearch}
+            />
             <Grid className={classes.cardContainer} justify="center" container spacing={1}>
               {cards.map(card => (
                 <Grid item container justify="center" key={card.id} md={3} sm={4} xs={12}>
@@ -63,7 +67,8 @@ Collection.propTypes = {
   collectionName: PropTypes.string.isRequired,
   filter: PropTypes.string,
   getCards: PropTypes.func.isRequired,
-  setFilter: PropTypes.func.isRequired
+  setFilter: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired
 }
 
 Collection.defaultProps = {

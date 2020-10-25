@@ -27,7 +27,8 @@
   },
   "FORM": {
     "CARD_NAME": "Card name",
-    "IMAGE_URL": "Image URL"
+    "IMAGE_URL": "Image URL",
+    "SEARCH": "Search"
   },
   "PAGES": {
     "DASHBOARD": {},

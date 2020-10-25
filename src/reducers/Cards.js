@@ -1,5 +1,5 @@
 import * as type from 'actions/async/Cards/Constants'
-import { SET_FILTER } from 'actions/sync/Cards/Constants'
+import { SET_FILTER, SET_SEARCH } from 'actions/sync/Cards/Constants'
 
 const initialState = {
   card: {},
@@ -54,6 +54,12 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         filter: action.filter
+      }
+    }
+    case SET_SEARCH: {
+      return {
+        ...state,
+        search: action.search
       }
     }
     default:

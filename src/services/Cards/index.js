@@ -1,6 +1,6 @@
 const API_BASE_ADDRESS = 'http://localhost:3004'
 
-export const loadCards = (filter = '') => {
+export const loadCards = ({ filter = '' }) => {
   let uri = `${API_BASE_ADDRESS}/cards`
   if (filter.length > 0) uri = `${uri}?rarity_like=${filter}`
   return fetch(uri, {
