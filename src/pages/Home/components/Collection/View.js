@@ -1,7 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
-import { Typography } from '@material-ui/core'
+import Hidden from '@material-ui/core/Hidden'
+import Typography from '@material-ui/core/Typography'
 import paths from 'constans/paths'
 import Image from 'components/Image'
 import { SectionItem } from 'components/Section'
@@ -20,14 +21,16 @@ const Collection = () => {
   return (
     <section className={classes.container}>
       <SectionItem>
-        <Grid className={classes.iconsContainer} container item sm={12}>
-          <div className={classes.dots}>
-            <Image src={dots} />
-          </div>
-          <div className={classes.plus}>
-            <Image src={plus} />
-          </div>
-        </Grid>
+        <Hidden xsDown>
+          <Grid className={classes.iconsContainer} container item sm={12}>
+            <div className={classes.dots}>
+              <Image src={dots} />
+            </div>
+            <div className={classes.plus}>
+              <Image src={plus} />
+            </div>
+          </Grid>
+        </Hidden>
         <Grid container justify="center" alignItems="center" item sm={12}>
           <Grid container item direction="column" sm={5}>
             <Typography component="h2" variant="h3">
@@ -37,13 +40,22 @@ const Collection = () => {
               {i18n.t('PAGES.HOME.COLLECTION.PARAGRAPH')}
             </Typography>
 
-            <SegaButton onClick={handleGoToCollection} color="secondary">
-              {i18n.t('PAGES.HOME.COLLECTION.GO_TO_COLLECTION')}
-            </SegaButton>
+            <Hidden smDown>
+              <SegaButton onClick={handleGoToCollection} color="secondary">
+                {i18n.t('PAGES.HOME.COLLECTION.GO_TO_COLLECTION')}
+              </SegaButton>
+            </Hidden>
           </Grid>
-          <Grid container item justify="flex-end" sm={7}>
-            <Image className={classes.image} src={captain} alt="captain" />
+          <Grid className={classes.image} container item justify="flex-end" sm={7}>
+            <Image src={captain} alt="captain" />
           </Grid>
+          <Hidden smUp>
+            <Grid container item justify="center" sm={7} style={{ marginTop: '5em' }}>
+              <SegaButton onClick={handleGoToCollection} color="secondary">
+                {i18n.t('PAGES.HOME.COLLECTION.GO_TO_COLLECTION')}
+              </SegaButton>
+            </Grid>
+          </Hidden>
         </Grid>
       </SectionItem>
     </section>

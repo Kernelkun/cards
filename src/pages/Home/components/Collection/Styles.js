@@ -2,7 +2,16 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
   container: {
-    marginTop: theme.spacing(17.5)
+    marginTop: theme.spacing(17.5),
+    paddingBottom: theme.spacing(12),
+    [theme.breakpoints.down('md')]: {
+      marginTop: theme.spacing(8),
+      paddingLeft: theme.spacing(3)
+    },
+    [theme.breakpoints.down('xs')]: {
+      margin: 0,
+      padding: theme.spacing(3)
+    }
   },
   dots: {
     left: '40%',
@@ -15,7 +24,12 @@ export default makeStyles(theme => ({
     marginBottom: theme.spacing(17.5),
     position: 'relative'
   },
-  image: { width: '90%' },
+  image: {
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'flex-start'
+    },
+    '& > img': { width: '90%' }
+  },
   plus: {
     left: '60%',
     position: 'absolute',

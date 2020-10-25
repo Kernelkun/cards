@@ -55,8 +55,23 @@ export default makeStyles(() => ({
     top: '25px',
     left: '5%',
     zIndex: theme.zIndex.appBar + 1,
+    [theme.breakpoints.up('lg')]: {
+      left: '18%'
+    },
     [theme.breakpoints.down('md')]: {
-      width: '8%'
+      width: '8%',
+      top: '35px'
+    },
+    [theme.breakpoints.down('xs')]: {
+      top: '40px',
+      width: '13%',
+      opacity: 1,
+      transform: 'unset',
+      right: '6%',
+      left: 'unset'
+    },
+    [theme.breakpoints.down(361)]: {
+      width: '21%'
     }
   },
   menu: {
@@ -69,7 +84,16 @@ export default makeStyles(() => ({
       animation: 'move-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
     },
     paddingLeft: '5%',
-    height: '100%'
+    height: '100%',
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: '2%'
+    }
+  },
+  menuButton: {
+    [theme.breakpoints.down('xs')]: {
+      position: 'absolute',
+      left: '7%'
+    }
   },
   navBar: {
     backgroundColor: '#030d37',

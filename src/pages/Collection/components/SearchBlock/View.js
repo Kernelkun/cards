@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Avatar from '@material-ui/core/Avatar'
-import TextField from '@material-ui/core/TextField'
+import InputBase from '@material-ui/core/InputBase'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import IconButton from '@material-ui/core/IconButton'
@@ -40,11 +40,11 @@ const SearchBlock = ({ collectionName, setSearch }) => {
         xs={12}
       >
         <Paper component="form" className={classes.search} onSubmit={handleSubmit}>
-          <TextField
+          <InputBase
             className={classes.input}
             color="secondary"
             id="search-input"
-            label={i18n.t('FORM.SEARCH')}
+            placeholder={i18n.t('FORM.SEARCH')}
             onChange={handleSearch}
             inputProps={{ 'aria-label': 'search', shrink: true }}
             value={searchField || ''}

@@ -9,7 +9,9 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import NavBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger'
+import useTheme from '@material-ui/core/styles/useTheme'
 import paths from 'constans/paths'
 import Image from 'components/Image'
 import StreamLootsLogo from 'img/streamloots-logo.svg'
@@ -21,6 +23,9 @@ const AppBar = () => {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 })
   const classes = useStyles({ trigger })
 
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('xs'))
+
   useEffect(() => {
     if (trigger && !out) setOut(true)
   }, [out, trigger])
@@ -29,8 +34,8 @@ const AppBar = () => {
     <div className={classes.container}>
       <Image
         className={clsx(
-          trigger && 'slide-in-top',
-          !trigger && out && 'slide-out-top',
+          !matches && trigger && 'slide-in-top',
+          !matches && !trigger && out && 'slide-out-top',
           classes.logo
         )}
         src={StreamLootsLogo}
@@ -47,86 +52,94 @@ const AppBar = () => {
               <MenuIcon />
             </IconButton>
           </Hidden>
-          <Grid
-            className={clsx(classes.menu, trigger && 'move-right', !trigger && out && 'move-left')}
-            container
-            direction="row"
-            alignItems="center"
-            justify="center"
-          >
+          <Hidden xsDown>
             <Grid
-              className={classes.buttonsContainer}
+              className={clsx(
+                classes.menu,
+                trigger && 'move-right',
+                !trigger && out && 'move-left'
+              )}
               container
-              item
-              justify="flex-start"
+              direction="row"
               alignItems="center"
-              md
-            >
-              <Grid container justify="center" item md={2}>
-                <div className={classes.clip}>
-                  <Button
-                    className={classes.button}
-                    component={Link}
-                    variant="text"
-                    to={paths.HOME}
-                  >
-                    Home
-                  </Button>
-                </div>
-              </Grid>
-
-              <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
-
-              <Grid container justify="center" item md={2}>
-                <div className={classes.clip}>
-                  <Button
-                    className={classes.button}
-                    component={Link}
-                    variant="text"
-                    to={paths.COLLECTION}
-                  >
-                    Collection
-                  </Button>
-                </div>
-              </Grid>
-
-              <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
-
-              <Grid container justify="center" item md={2}>
-                <div className={classes.clip}>
-                  <Button
-                    className={classes.button}
-                    component={Link}
-                    variant="text"
-                    to={paths.HOME}
-                  >
-                    Sega 60th
-                  </Button>
-                </div>
-              </Grid>
-
-              <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
-            </Grid>
-            <Grid
-              style={{ height: '100%' }}
-              container
-              item
               justify="center"
-              alignItems="center"
-              md={2}
             >
-              <div className={classes.clip}>
-                <Button
-                  className={classes.buttonSignup}
-                  color="secondary"
-                  variant="contained"
-                  onClick={preventDefault}
-                >
-                  Sign up
-                </Button>
-              </div>
+              <Grid
+                className={classes.buttonsContainer}
+                container
+                item
+                justify="flex-start"
+                alignItems="center"
+                md
+                sm
+              >
+                <Grid container justify="center" item md={2} sm={2}>
+                  <div className={classes.clip}>
+                    <Button
+                      className={classes.button}
+                      component={Link}
+                      variant="text"
+                      to={paths.HOME}
+                    >
+                      Home
+                    </Button>
+                  </div>
+                </Grid>
+
+                <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
+
+                <Grid container justify="center" item md={2} sm={2}>
+                  <div className={classes.clip}>
+                    <Button
+                      className={classes.button}
+                      component={Link}
+                      variant="text"
+                      to={paths.COLLECTION}
+                    >
+                      Collection
+                    </Button>
+                  </div>
+                </Grid>
+
+                <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
+
+                <Grid container justify="center" item md={2} sm={2}>
+                  <div className={classes.clip}>
+                    <Button
+                      className={classes.button}
+                      component={Link}
+                      variant="text"
+                      to={paths.HOME}
+                    >
+                      Sega 60th
+                    </Button>
+                  </div>
+                </Grid>
+
+                <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
+              </Grid>
+              <Grid
+                style={{ height: '100%' }}
+                container
+                item
+                justify="center"
+                alignItems="center"
+                md={2}
+                sm={2}
+              >
+                <div className={classes.clip}>
+                  <Button
+                    className={classes.buttonSignup}
+                    color="secondary"
+                    variant="contained"
+                    onClick={preventDefault}
+                  >
+                    Sign up
+                  </Button>
+                </div>
+              </Grid>
             </Grid>
-          </Grid>
+          </Hidden>
         </Toolbar>
       </NavBar>
     </div>
