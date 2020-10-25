@@ -12,5 +12,12 @@ export default makeStyles(theme => ({
     height: '100vh',
     width: '100%',
     minHeight: '700px'
+  },
+  videoLogo: {
+    width: '100%',
+    height: '100%',
+    '& img': {
+      zIndex: 1
+    }
   }
 }))

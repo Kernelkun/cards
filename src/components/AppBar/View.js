@@ -24,7 +24,7 @@ import useStyles from './Styles'
 
 const AppBar = () => {
   const [out, setOut] = useState(false)
-  const [openDrawer, setOpenDrawer] = useState(true)
+  const [openDrawer, setOpenDrawer] = useState(false)
   const preventDefault = event => event.preventDefault()
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 })
   const classes = useStyles({ trigger })
@@ -106,21 +106,6 @@ const AppBar = () => {
                       to={paths.COLLECTION}
                     >
                       Collection
-                    </Button>
-                  </div>
-                </Grid>
-
-                <Divider classes={{ root: classes.divider }} orientation="vertical" flexItem />
-
-                <Grid container justify="center" item md={2} sm={2}>
-                  <div className={classes.clip}>
-                    <Button
-                      className={classes.button}
-                      component={Link}
-                      variant="text"
-                      to={paths.HOME}
-                    >
-                      Sega 60th
                     </Button>
                   </div>
                 </Grid>
