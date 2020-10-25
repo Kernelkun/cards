@@ -53,8 +53,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "server": "json-server --watch src/support/cards/chibi.json --port 3004",
-    "heroku": "npx heroku open",
-    "push-heroku": "git push heroku master"
+    "heroku": "npx heroku open"
   },
   "eslintConfig": {
     "extends": "react-app"
