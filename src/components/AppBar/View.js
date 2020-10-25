@@ -12,6 +12,11 @@ import Toolbar from '@material-ui/core/Toolbar'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import useTheme from '@material-ui/core/styles/useTheme'
+import CloseIcon from '@material-ui/icons/Close'
+import Drawer from '@material-ui/core/Drawer'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
 import paths from 'constans/paths'
 import Image from 'components/Image'
 import StreamLootsLogo from 'img/streamloots-logo.svg'
@@ -19,12 +24,15 @@ import useStyles from './Styles'
 
 const AppBar = () => {
   const [out, setOut] = useState(false)
+  const [openDrawer, setOpenDrawer] = useState(true)
   const preventDefault = event => event.preventDefault()
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 })
   const classes = useStyles({ trigger })
 
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('xs'))
+
+  const toggleDrawer = () => setOpenDrawer(!openDrawer)
 
   useEffect(() => {
     if (trigger && !out) setOut(true)
@@ -44,10 +52,11 @@ const AppBar = () => {
         <Toolbar className={classes.toolbar}>
           <Hidden mdUp>
             <IconButton
-              edge="start"
+              aria-label="menu"
               className={classes.menuButton}
               color="inherit"
-              aria-label="menu"
+              edge="start"
+              onClick={toggleDrawer}
             >
               <MenuIcon />
             </IconButton>
@@ -141,6 +150,44 @@ const AppBar = () => {
             </Grid>
           </Hidden>
         </Toolbar>
+        <Drawer
+          anchor="left"
+          classes={{
+            paper: classes.drawerPaper
+          }}
+          open={openDrawer}
+          onClose={toggleDrawer}
+        >
+          <div className={classes.drawerMenu} role="presentation" onKeyDown={toggleDrawer}>
+            <List>
+              <Grid className={classes.drawerHeader} container alignItems="flex-start">
+                <Grid item xs />
+                <Grid container justify="center" item xs>
+                  <Image src={StreamLootsLogo} />
+                </Grid>
+                <Grid container justify="flex-end" item xs>
+                  <IconButton onClick={toggleDrawer}>
+                    <CloseIcon />
+                  </IconButton>
+                </Grid>
+              </Grid>
+
+              <ListItem button component={Link} key="Home" onClick={toggleDrawer} to={paths.HOME}>
+                <ListItemText primary="Home" />
+              </ListItem>
+
+              <ListItem
+                button
+                component={Link}
+                key="Collection"
+                onClick={toggleDrawer}
+                to={paths.COLLECTION}
+              >
+                <ListItemText primary="Collection" />
+              </ListItem>
+            </List>
+          </div>
+        </Drawer>
       </NavBar>
     </div>
   )

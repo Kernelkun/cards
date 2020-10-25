@@ -39,6 +39,15 @@ export default makeStyles(() => ({
     backgroundColor: '#072fdc !important',
     width: '2px !important'
   },
+  drawerPaper: {
+    width: '100%',
+    backgroundColor: '#030d37',
+    color: theme.palette.common.white,
+    '& ul > div button': { color: theme.palette.common.white }
+  },
+  drawerHeader: {
+    padding: theme.spacing(4)
+  },
   logo: {
     '&.slide-out-top': {
       WebkitAnimation: 'slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
